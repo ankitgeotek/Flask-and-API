@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLP App Registration Page</title>
+</head>
+<body style="background-color: lightpink;">
+  
+    <h1>NLP App</h1>
+    <h3>Register Here</h3>
+
+    <!--Writing python code in HTML using ginger template   -->
+    {% if message %}
+    <p style="color: red;">{{message}}</p>
+    {%endif%}
+
+    <form action="/perform_registration" method="post">
+            <label for="text">Name:</label><br>
+            <input type="text" placeholder="Ankit" name="user_name"><br><br>
+
+            <label for="Email">Email:</label><br>
+            <input type="email" placeholder="abc@email.com" name="user_email"><br><br>
+
+            <label for="">Password</label><br>
+            <input type="password" name="user_password"><br><br>
+
+            <input type="submit" value="Register">
+    </form><br>
+
+    <p>
+        Already a Member? <a href="/">Login here</a>
+    </p>
+    
+
+
+
+
+</body>
+</html>

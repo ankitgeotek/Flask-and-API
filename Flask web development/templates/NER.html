@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<form action="/perform_ner" method="post">
+    <label for="">Type your text here:</label><br>
+    <textarea name="ner_text" id="" cols="30" rows="10" placeholder="Enter the text here" autofocus ></textarea><br><br>
+    <input type="submit" value="Perform NER">
+
+</form>
+
+
+    <!--Writing python code in HTML using Jinja template   -->
+    {% if response %}
+
+        {% for i in response['entities']: %}
+            <p>{{ i['name'] + "==>" + i['category'] }}</p>
+        {% endfor %}
+
+    {% endif %}
+
+</body>
+</html>
